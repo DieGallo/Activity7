@@ -100,3 +100,18 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+--------------------- HOMEWORK 6 -------------------------
+# Project Name
+
+This project is a Laravel application for managing a robotics school. It includes features such as user authentication, course management, and enrollment of students in different groups.
+# Robotics School Management System
+
+This project is a Laravel application for managing a robotics school. It includes features such as user authentication, course management, and enrollment of students in different groups.
+
+## ER Diagram
+
+![ER Diagram](/diagramERHomework6.png)
+
