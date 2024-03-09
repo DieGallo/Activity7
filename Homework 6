@@ -1,0 +1,73 @@
+-Create a Seeder for Users:
+  php artisan make:seeder UserSeeder
+-Create a Seeder for Robotics Kits:
+  php artisan make:seeder RoboticsKitSeeder
+-Create a Factory for Courses:
+  php artisan make:factory CourseFactory --model=Course
+
+Code:
+// UserSeeder.php
+
+use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Role;
+
+class UserSeeder extends Seeder
+{
+    public function run()
+    {
+        $adminRole = Role::where('name', 'Administrative')->first();
+        $teacherRole = Role::where('name', 'Teacher')->first();
+        $studentRole = Role::where('name', 'Student')->first();
+
+        User::create([
+            'name' => 'Admon',
+            'email' => 'admon@robotics.com',
+            'password' => bcrypt('Adm@2022'),
+            'role_id' => $adminRole->id,
+        ]);
+
+        User::create([
+            'name' => 'Tecmilenio',
+            'email' => 'tecmilenio@robotics.com',
+            'password' => bcrypt('Adm@2022'),
+            'role_id' => $teacherRole->id,
+        ]);
+
+        User::create([
+            'name' => 'Student',
+            'email' => 'student@robotics.com',
+            'password' => bcrypt('Adm@2022'),
+            'role_id' => $studentRole->id,
+        ]);
+    }
+}
+
+// RoboticsKitSeeder.php
+
+use Illuminate\Database\Seeder;
+use App\Models\RoboticsKit;
+
+class RoboticsKitSeeder extends Seeder
+{
+    public function run()
+    {
+        RoboticsKit::create([
+            'name' => 'StarterKit',
+        ]);
+
+        RoboticsKit::create([
+            'name' => 'Educational Robotics Kit',
+        ]);
+
+        RoboticsKit::create([
+            'name' => 'Kit5',
+        ]);
+    }
+}
+
+After creating the seeders and factories, you can run them to populate the database with the provided data by using the following Artisan commands:
+
+  php artisan db:seed --class=UserSeeder
+  php artisan db:seed --class=RoboticsKitSeeder
+  php artisan db:seed --class=CourseFactory --times=100
