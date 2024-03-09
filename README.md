@@ -113,5 +113,5 @@ This project is a Laravel application for managing a robotics school. It include
 
 ## ER Diagram
 
-![ER Diagram](/diagramERHomework6.png)
+![ER Diagram]([/diagramERHomework6.png](https://ibb.co/CnKzJVp)https://ibb.co/CnKzJVp)
 
